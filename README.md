@@ -11,11 +11,17 @@ npm install react-native-rn-thub-text-recognition
 ## Usage
 
 ```js
-import RnThubTextRecognition from "react-native-rn-thub-text-recognition";
+import RnThubTextRecognition from 'react-native-rn-thub-text-recognition';
 
-// ...
-
-const result = await RnThubTextRecognition.multiply(3, 7);
+RnThubTextRecognition.textDetection(
+  imagePath,
+  (data) => {
+    console.log(data);
+  },
+  (errorMessage) => {
+    console.log(errorMessage);
+  }
+);
 ```
 
 ## Contributing
